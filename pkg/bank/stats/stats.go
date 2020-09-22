@@ -16,7 +16,7 @@ func Avg(pyments []types.Payment) types.Money {
 	return avg
 }
 
-func Total(cards []types.Card) types.Money {
+func TotalInCategory(cards []types.Card) types.Money {
 	summ := types.Money(0)
 	for _, card := range cards {
 		if card.Active {
