@@ -15,18 +15,3 @@ func Avg(pyments []types.Payment) types.Money {
 	avg := summ / types.Money(len(pyments))
 	return avg
 }
-
-func TotalInCategory(cards []types.Card) types.Money {
-	summ := types.Money(0)
-	for _, card := range cards {
-		if card.Active {
-			continue
-		}
-		if card.Balance <= 0 {
-			continue
-		}
-
-		summ = summ + card.Balance
-	}
-	return summ
-}
